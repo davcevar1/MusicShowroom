@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <?php
+include 'funcion.php';
 include 'db.php';
+
      ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,8 +56,11 @@ include 'db.php';
             <ul class="list-unstyled">
               <li class="media">
                 <div class="media-body">
-					<p><img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image" href="#"><a class="btn btn-primary btn-lg" href="#" role="button">Regresar artista</a></p>
-					<p><img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image" href="#"><a class="btn btn-primary btn-lg" href="#" role="button">Siguiente artista</a></p>
+
+<form method="get">
+					<p><img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image" href="#"><input class="btn btn-primary btn-lg"  type="submit" name="regresarArtista<?php echo $_SESSION["artistaA"]; ?>" value="Regresar Artista"/></p>
+					<p><img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image" href="#"><input class="btn btn-primary btn-lg"  type="submit" name="siguienteArtista<?php echo $_SESSION["artistaA"]; ?>" value="Siguiente Artista"/></p>
+</form>
                 </div>
               </li>
             </ul>
@@ -65,16 +70,16 @@ include 'db.php';
               <li class="media">
                 <img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image">
                 <div class="media-body">
-                 <h5 class="mt-0 mb-1 text-center"> <?php echo $n; ?></h5><br>
-					<h4 class="mt-0 mb-1 text-center">Nombre de canción</h4>
-					<h6 class="mt-0 mb-1 text-center">Álbum</h6>
+                 <h5 class="mt-0 mb-1 text-center"> <?php echo $NombreArt; ?></h5><br>
+					<h4 class="mt-0 mb-1 text-center"> <?php echo $nombCan;?></h4>
           <h6 class="mt-0 mb-1 text-center">2018</h6>
           <div class="media-body"><br>
-            <audio src="./Canciones/Victor1.mp3" controls="controls" type="audio/mpeg" preload="preload">
+            <audio src="./Canciones/<?php echo $uc; ?>" controls="controls" type="audio/mpeg" preload="preload">
             </audio>
             <br>
-						<a class="btn btn-primary btn-sm" href="#" role="button">Regresar canción</a>
-            <a class="btn btn-primary btn-sm" href="#" role="button">Siguiente canción</a>
+
+					<a class="btn btn-primary btn-sm" href="#" role="button">Regresar canción</a>
+          <a class="btn btn-primary btn-sm" href="#" role="button">Siguiente canción</a>
 
 					</div>
                 </div>

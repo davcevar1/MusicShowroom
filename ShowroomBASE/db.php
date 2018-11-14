@@ -1,4 +1,5 @@
 <?php
+
 $username = 'root';
 $pasword = '';
 
@@ -13,17 +14,36 @@ catch (PDOException $e){
 }
 
 $sqlR = 'SELECT * FROM Musica.Artista;';
+$sqlM = 'SELECT * FROM Musica.Cancion;';
 $result = $pdo->query($sqlR);
+$result2 = $pdo ->query($sqlM);
 
 while($row = $result->fetch()){
-  $nombreArtista[] = $row['NombreArtista'];
+  $idArtista[] = $row['idArtista'];
+   $nombreArtista[] = $row['NombreArtista'];
+ }
+
+
+while($row = $result2->fetch()){
+  $idArtistaCancion[] = $row['idArtista'];
+  $idCancion[] = $row['idCan'];
+  $nombreCancion[] = $row['NombreCancion'];
+  $urlCancion[] = $row['urlCancion'];
+
+
 
 }
-$nArtista = 0;
-foreach ( $nombreArtista as $artista ) {
-  //echo "<br>".$nombreArtista[$nArtista];
-  $n = $nombreArtista[$nArtista];
-  $nArtista = $nArtista+=1 ;
+// $cancionActualAritista[];
+// for ($i=0; $i < ; $i++) {
+//   if($idArtistaCancion[i]==$idArtista[$_SESSION["artistaA"]]){
+//     $cancionActualAritista[i]=$nombreCancion[i];
+//   }
+// }
 
-}
+
+
+$NombreArt = $nombreArtista [$_SESSION["artistaA"]];
+$idArt = $idArtista[$_SESSION["artistaA"]];
+$nombCan = $nombreCancion[$_SESSION["artistaA"]];
+
  ?>
