@@ -9,25 +9,25 @@ include 'db.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Portfolio Page Template</title>
+    <title>Music Showroom</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <!--<a class="navbar-brand" href="#"></a>-->
+      <a class="navbar-brand" href="#">
+		  <img class="mr-3" width="50" height="50" src="images/isotipo.png" alt="Generic placeholder image" href="#">
+		  <strong>MUSIC SHOWROOM</strong></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Showroom<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Explorar canciones<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Género
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Género</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Rock</a>
               <a class="dropdown-item" href="#">Pop</a>
@@ -44,7 +44,7 @@ include 'db.php';
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-			  <img src="images/logo1.png" alt="Generic placeholder image">
+			  <img width="400" height="300" src="images/logo1.png" alt="Generic placeholder image">
           </div>
         </div>
       </div>
@@ -58,8 +58,8 @@ include 'db.php';
                 <div class="media-body">
 
 <form method="get">
-					<p><img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image" href="#"><input class="btn btn-primary btn-lg"  type="submit" name="regresarArtista<?php echo $_SESSION["artistaA"]; ?>" value="Regresar Artista"/></p>
-					<p><img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image" href="#"><input class="btn btn-primary btn-lg"  type="submit" name="siguienteArtista<?php echo $_SESSION["artistaA"]; ?>" value="Siguiente Artista"/></p>
+					<p><img class="mr-3" width="35" height="35" src="images/flechaUp.png" alt="Generic placeholder image" href="#"><input class="btn btn-primary btn-lg"  type="submit" name="regresarArtista<?php echo $_SESSION["artistaA"]; ?>" value="Regresar Artista"/></p>
+					<p><img class="mr-3" width="35" height="35" src="images/flechaDown.png" alt="Generic placeholder image" href="#"><input class="btn btn-primary btn-lg"  type="submit" name="siguienteArtista<?php echo $_SESSION["artistaA"]; ?>" value="Siguiente Artista"/></p>
 </form>
                 </div>
               </li>
@@ -68,7 +68,7 @@ include 'db.php';
           <div class="col-md-4 col-12">
             <ul class="list-unstyled">
               <li class="media">
-                <img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image">
+                <img class="mr-3" width="35" height="35" src="images/35X35.png" alt="Generic placeholder image">
                 <div class="media-body">
                  <h5 class="mt-0 mb-1 text-center"> <?php echo $NombreArt; ?></h5><br>
 					<h4 class="mt-0 mb-1 text-center"> <?php echo $nombCan;?></h4>
@@ -90,7 +90,7 @@ include 'db.php';
             <ul class="list-unstyled">
               <li class="media">
 				<div class="media-body">
-                  <img class="mr-3" src="images/200X200.gif" alt="Generic placeholder image">
+                  <img class="mr-3" width="200" height="200" src="images/200X200.png" alt="Generic placeholder image">
                 </div>
               </li>
             </ul>
