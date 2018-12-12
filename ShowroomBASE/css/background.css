@@ -1,0 +1,44 @@
+body , .bgImage {
+ margin: 0;
+ height: 100%;
+ width: 100%;
+ overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+ background-image: url(https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-0.3.5&s=e20bc3d490c974d9ea190e05c47962f5&auto=format&fit=crop&w=634&q=80);
+background-size: cover;
+background-position: top;
+  -webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(70%);
+  z-index: -1;
+}
+
+.blobCont {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+
+
+
+@for $i from 1 through 18 {
+   $a : #{$i*90};
+   $b : #{$i*90+360};
+
+  .blob:nth-child(#{$i}) {
+      animation: move#{$i} 20s infinite linear;
+  }
+
+  @keyframes move#{$i} {
+    from {
+      transform:rotate(#{$a}deg) translate( 200px ,0.1px) rotate(-#{$a}deg);
+    }
+    to {
+      transform:rotate(#{$b}deg) translate( 200px ,0.1px) rotate(-#{$b}deg);
+    }
+  }
+
+  }

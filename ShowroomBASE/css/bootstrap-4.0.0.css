@@ -4,6 +4,9 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -489,6 +492,7 @@ mark,
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto;
+
 }
 
 .figure {
@@ -583,6 +587,13 @@ pre code {
   .container {
     max-width: 1140px;
   }
+}
+@@media (min-width 1000px) {
+  .container{
+    max-width:800px  ;
+  }
+
+
 }
 
 .container-fluid {
@@ -2503,14 +2514,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #880b17;
-  border-color: #880b17;
+  background-color: #f05b76;
+  border-color: #f05b76;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #880b17;
-  border-color: #880b17;
+  background-color: #f05b76;
+  border-color: #f05b76;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -2519,15 +2530,15 @@ fieldset:disabled a.btn {
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #880b17;
-  border-color: #880b17;
+  background-color: #f05b76;
+  border-color: #f05b76;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #880b17;
-  border-color: #880b17;
+  background-color: #f05b76;
+  border-color: #f05b76;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,

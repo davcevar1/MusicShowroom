@@ -15,8 +15,13 @@ session_start();
  if ($_SESSION["artistaA"]<0) {
    $_SESSION["artistaA"]=0;
  }
+ if ($_SESSION["artistaA"]>3){
+   $_SESSION["artistaA"]=0;
+ }
+
 
 $funAr =$_SESSION["artistaA"];
-
+/*
 echo $_SESSION["artistaA"];
+*/
 ?>

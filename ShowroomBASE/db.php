@@ -21,6 +21,10 @@ $result2 = $pdo ->query($sqlM);
 while($row = $result->fetch()){
   $idArtista[] = $row['idArtista'];
    $nombreArtista[] = $row['NombreArtista'];
+  $infArtista[] = $row['infArt'];
+  $soundA[] = $row['Cloud'];
+  $fbArt[] = $row ['Fb'];
+  $imgA[] = $row ['ImagenAr'];
  }
 
 
@@ -41,9 +45,13 @@ while($row = $result2->fetch()){
 // }
 
 
-
+$infArtista  = $infArtista [$_SESSION["artistaA"]];
+$urlCancion = $urlCancion [$_SESSION["artistaA"]];
 $NombreArt = $nombreArtista [$_SESSION["artistaA"]];
 $idArt = $idArtista[$_SESSION["artistaA"]];
 $nombCan = $nombreCancion[$_SESSION["artistaA"]];
+$soundA = $soundA[$_SESSION["artistaA"]];
+$fbArt = $fbArt[$_SESSION["artistaA"]];
+$imgA = $imgA [$_SESSION["artistaA"]];
 
  ?>
